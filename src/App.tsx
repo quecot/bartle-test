@@ -1,7 +1,7 @@
-function App() {
-  return (
-    <div className="font-bold">Hello, Tailwind</div>
-  )
-}
+import React from 'react';
 
-export default App
+const App = () => (
+  <div className="font-bold">Hello, Tailwind</div>
+);
+
+export default App;
