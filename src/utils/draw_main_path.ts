@@ -5,7 +5,7 @@ const drawMainPath = (canvas: HTMLCanvasElement, startLevel: number, startDot: n
   ctx.fillStyle = '#008AFF'; // Same as in answer-blue in tailwind.config.js
   ctx.strokeStyle = '#008AFF';
   ctx.lineWidth = 4 * lineWidth;
-  ctx.setLineDash([0, 0]);
+  ctx.setLineDash([]);
 
   const startY = ((7 - startLevel) * height) / 8;
   const dotsInLevel = 3 * startLevel + 1;
