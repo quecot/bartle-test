@@ -17,6 +17,44 @@
         "react",
         "@typescript-eslint"
     ],
+    "settings": {
+      "import/resolver": {
+         "node": {
+            "extensions": [".js", ".jsx", ".ts", ".tsx"]
+          },
+          "alias": {
+            "map": [
+              [
+                "@assets",
+                "./assets"
+              ],
+              [
+                "@components",
+                "./src/components"
+              ],
+              [
+                "@views",
+                "./src/views"
+              ],
+              [
+                "@interfaces",
+                "./src/interfaces"
+              ],
+              [
+                "@utils",
+                "./src/utils"
+              ],
+              [
+                "@src",
+                "./src"
+              ]
+          ],
+          "extensions": [
+            ".ts", ".tsx"
+          ]
+        }
+      }
+    },
     "rules": {
         "linebreak-style": [
             "error",
