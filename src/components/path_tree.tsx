@@ -4,6 +4,7 @@ import fitToContainer from '@utils/fit_to_container';
 import drawTreeDots from '@utils/draw_tree_dots';
 import drawTreeLines from '@utils/draw_tree_lines';
 import clearCanvas from '@utils/clear_canvas';
+import drawMainPath from '@utils/draw_main_path';
 
 const PathTree: React.FC = () => {
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
@@ -27,6 +28,11 @@ const PathTree: React.FC = () => {
     clearCanvas(canvas);
     drawTreeDots(canvas, level, 5 * dpr);
     drawTreeLines(canvas, level, dpr);
+    drawMainPath(canvas, 0, 0, 3, dpr, 7 * dpr);
+    drawMainPath(canvas, 1, 3, 2, dpr, 7 * dpr);
+    drawMainPath(canvas, 2, 5, 1, dpr, 7 * dpr);
+    drawMainPath(canvas, 3, 6, 1, dpr, 7 * dpr);
+    // (canvas, startLevel, startDot, answer, lineWidth, dotRadius)
   }, [dimensions, level]);
 
   return (

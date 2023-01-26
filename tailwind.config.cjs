@@ -13,6 +13,7 @@ module.exports = {
         achiever: '#BBBBBB',
         killer: '#888888',
         neutral: '#CACACA',
+        'answer-blue': '#008AFF',
       },
     },
   },
