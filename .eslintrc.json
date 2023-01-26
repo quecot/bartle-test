@@ -26,7 +26,7 @@
             "map": [
               [
                 "@assets",
-                "./assets"
+                "./src/assets"
               ],
               [
                 "@components",
