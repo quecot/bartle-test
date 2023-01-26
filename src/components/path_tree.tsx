@@ -61,7 +61,6 @@ const drawTreeLines = (canvas: HTMLCanvasElement, level: number, lineWidth: numb
 
 const PathTree: React.FC = () => {
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
-  // eslint-disable-next-line no-unused-vars
   const [level, setLevel] = useState(5);
 
   const handleResize = () => {
@@ -87,11 +86,15 @@ const PathTree: React.FC = () => {
     clearCanvas(canvas);
     drawTreeDots(canvas, level, 5 * dpr);
     drawTreeLines(canvas, level, dpr);
-  }, [dimensions]);
+  }, [dimensions, level]);
 
   return (
     <div className="w-screen h-screen">
       <canvas />
+      <div className="absolute w-full flex gap-10 items-center justify-center bottom-8">
+        <button type="button" className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" onClick={() => setLevel(level + 1)}>+</button>
+        <button type="button" className="bg-zinc-500 hover:bg-zinc-700 text-white font-bold py-2 px-4 rounded" onClick={() => setLevel(level - 1)}>-</button>
+      </div>
     </div>
   );
 };
