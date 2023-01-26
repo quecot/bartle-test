@@ -1,7 +1,10 @@
 import React from 'react';
+import Background from '@components/background';
 
 const App = () => (
-  <div className="font-bold">Hello, Tailwind</div>
+  <div>
+    <Background />
+  </div>
 );
 
 export default App;
