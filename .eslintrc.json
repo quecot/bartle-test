@@ -90,6 +90,7 @@
             }
           ],
         "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"] }],
-        "no-param-reassign": "off"
+        "no-param-reassign": "off",
+        "no-nested-ternary": "off"
     }
 }

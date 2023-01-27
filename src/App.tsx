@@ -1,12 +1,12 @@
 import React from 'react';
 
 import Background from '@components/background';
-import PathTree from '@components/path_tree';
+import Quizz from '@components/quizz';
 
 const App = () => (
   <div>
     <Background />
-    <PathTree />
+    <Quizz />
   </div>
 );
 

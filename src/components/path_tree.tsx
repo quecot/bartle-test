@@ -8,7 +8,7 @@ import drawMainPath from '@utils/draw_main_path';
 
 const PathTree: React.FC = () => {
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
-  const [level, setLevel] = useState(5);
+  const [level, setLevel] = useState(3);
 
   const handleResize = () => {
     setDimensions({
@@ -28,20 +28,13 @@ const PathTree: React.FC = () => {
     clearCanvas(canvas);
     drawTreeDots(canvas, level, 5 * dpr);
     drawTreeLines(canvas, level, dpr);
-    drawMainPath(canvas, 0, 0, 3, dpr, 7 * dpr);
-    drawMainPath(canvas, 1, 3, 2, dpr, 7 * dpr);
-    drawMainPath(canvas, 2, 5, 1, dpr, 7 * dpr);
-    drawMainPath(canvas, 3, 6, 1, dpr, 7 * dpr);
-    // (canvas, startLevel, startDot, answer, lineWidth, dotRadius)
+    drawMainPath(canvas, 0, 0, 1, dpr, 5 * dpr);
+    drawMainPath(canvas, 1, 1, 3, dpr, 5 * dpr);
   }, [dimensions, level]);
 
   return (
     <div className="w-screen h-screen">
       <canvas />
-      <div className="absolute w-full flex gap-10 items-center justify-center bottom-8">
-        <button type="button" className="bg-teal-500 hover:bg-teal-700 text-white font-bold py-2 px-4 rounded" onClick={() => setLevel(level + 1)}>+</button>
-        <button type="button" className="bg-zinc-500 hover:bg-zinc-700 text-white font-bold py-2 px-4 rounded" onClick={() => setLevel(level - 1)}>-</button>
-      </div>
     </div>
   );
 };
