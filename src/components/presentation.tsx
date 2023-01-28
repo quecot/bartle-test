@@ -50,7 +50,7 @@ const Presentation: React.FC<Props> = ({ setQuizzStatus }) => (
       <small className="max-w-[60rem] text-center italic">By starting the test I understand this app will recollect anonymous information about my answers to calculate data means, and agree</small>
       <button
         type="button"
-        className="px-4 min-h-[3rem] bg-emphasis text-neutral hover:bg-neutral hover:text-black rounded hover:border-2 hover:border-emphasis"
+        className="px-4 min-h-[3rem] bg-emphasis text-neutral hover:bg-neutral hover:text-emphasis rounded hover:border-2 hover:border-emphasis"
         onClick={() => setQuizzStatus('in-progress')}
       >
         Let&apos;s get started!
