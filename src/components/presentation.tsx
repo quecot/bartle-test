@@ -5,7 +5,7 @@ interface Props {
 }
 
 const Presentation: React.FC<Props> = ({ setQuizzStatus }) => (
-  <div className="w-screen h-screen min-w-[100%] min-h-[100%] bg-neutral flex flex-col">
+  <div className="w-full h-full min-w-[100vw] min-h-[100vh] bg-neutral flex flex-col">
     <div className="flex flex-col items-center h-full w-full justify-around gap-12 px-8">
       <h1 className="pt-12 font-bold text-3xl whitespace-nowrap text-emphasis-blue">⚙️ Bartle Personality Test ⚙️</h1>
       <p className="max-w-[60rem] text-center">
