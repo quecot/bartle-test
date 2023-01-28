@@ -9,13 +9,20 @@ import drawAnswers from '@utils/draw_answers';
 import Question from '@components/question';
 import sumArray from '@utils/sum_array';
 
-const PathTree: React.FC = () => {
+interface Props {
+  setQuizzStatus: React.Dispatch<React.SetStateAction<string>>
+}
+
+const PathTree: React.FC<Props> = ({ setQuizzStatus }) => {
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
   const [answers, setAnswers] = useState<Array<number>>([]);
   const [level, setLevel] = useState(1);
 
   const handleLevelChange = () => {
     setLevel(level + 1);
+    if (level >= 4) {
+      setQuizzStatus('results');
+    }
   };
 
   const handleResize = () => {

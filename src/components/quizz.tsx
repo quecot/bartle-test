@@ -4,19 +4,16 @@ import Presentation from '@components/presentation';
 import Result from '@components/result';
 
 const Quizz = () => {
-  const [quizzStatus, setQuizzStatus] = useState('start'); // Possible values are 'start', 'in-progress', 'result'
+  const [quizzStatus, setQuizzStatus] = useState('start'); // Possible values are 'start', 'in-progress', 'results'
 
   return (
     <div>
       {
         quizzStatus === 'start' ? <Presentation setQuizzStatus={setQuizzStatus} />
-          : quizzStatus === 'in-progress' ? <PathTree />
-            : quizzStatus === 'result' ? (
-              <div>
-                <Result />
-                <PathTree />
-              </div>
-            ) : null
+          : <PathTree setQuizzStatus={setQuizzStatus} />
+      }
+      {
+        quizzStatus === 'results' ? <Result /> : null
       }
     </div>
   );
