@@ -4,11 +4,19 @@ import fitToContainer from '@utils/fit_to_container';
 import drawTreeDots from '@utils/draw_tree_dots';
 import drawTreeLines from '@utils/draw_tree_lines';
 import clearCanvas from '@utils/clear_canvas';
-import drawMainPath from '@utils/draw_main_path';
+import drawAnswers from '@utils/draw_answers';
+
+import Question from '@components/question';
+import sumArray from '@utils/sum_array';
 
 const PathTree: React.FC = () => {
   const [dimensions, setDimensions] = useState({ width: window.innerWidth, height: window.innerHeight });
-  const [level, setLevel] = useState(3);
+  const [answers, setAnswers] = useState<Array<number>>([]);
+  const [level, setLevel] = useState(1);
+
+  const handleLevelChange = () => {
+    setLevel(level + 1);
+  };
 
   const handleResize = () => {
     setDimensions({
@@ -26,15 +34,15 @@ const PathTree: React.FC = () => {
     const dpr = window.devicePixelRatio || 1;
     fitToContainer(canvas);
     clearCanvas(canvas);
-    drawTreeDots(canvas, level, 5 * dpr);
-    drawTreeLines(canvas, level, dpr);
-    drawMainPath(canvas, 0, 0, 1, dpr, 5 * dpr);
-    drawMainPath(canvas, 1, 1, 3, dpr, 5 * dpr);
+    drawTreeDots(canvas, answers.length + 1, 5 * dpr);
+    drawTreeLines(canvas, answers.length + 1, dpr);
+    drawAnswers(canvas, answers, dpr);
   }, [dimensions, level]);
 
   return (
     <div className="w-screen h-screen">
-      <canvas />
+      <Question level={answers.length + 1} setAnswers={setAnswers} handleLevelChange={handleLevelChange} active currentDot={sumArray(answers)} answers={answers} />
+      <canvas className="absolute top-0 -z-10" />
     </div>
   );
 };
