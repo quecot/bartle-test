@@ -2,6 +2,8 @@ const drawTreeDots = (canvas: HTMLCanvasElement, level: number, dotRadius: numbe
   const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
   const { width, height } = canvas;
 
+  ctx.fillStyle = '#fffafa'; // Same as in emphasis in tailwind.config.js
+
   for (let i = 0; i < level; i += 1) {
     const dotY = ((7 - i) * height) / 8;
     const dotsInLevel = 3 * i + 1;

@@ -3,6 +3,7 @@ const drawTreeLines = (canvas: HTMLCanvasElement, level: number, lineWidth: numb
   const { width, height } = canvas;
 
   ctx.lineWidth = lineWidth;
+  ctx.strokeStyle = '#fffafa'; // Same as in emphasis in tailwind.config.js
 
   for (let i = 0; i < level - 1; i += 1) {
     const startY = ((7 - i) * height) / 8;

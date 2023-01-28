@@ -61,7 +61,7 @@ const Question: React.FC<Props> = ({
         {/* @ts-ignore */}
         <p className="text-center pb-4 px-6">{QUESTIONS[level.toString()]}</p>
         <input required type="text" className="p-4 w-full text-center focus:outline-none" />
-        <button type="submit" className="w-full p-4 hover:bg-killer rounded-b-xl hover:text-neutral">Send</button>
+        <button type="submit" className="w-full p-4 hover:bg-gray-500 rounded-b-xl hover:text-white">Send</button>
       </form>
     </div>
   );
