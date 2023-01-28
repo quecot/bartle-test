@@ -2,8 +2,8 @@ const drawMainPath = (canvas: HTMLCanvasElement, startLevel: number, startDot: n
   const ctx = canvas.getContext('2d') as CanvasRenderingContext2D;
   const { width, height } = canvas;
 
-  ctx.fillStyle = '#008AFF'; // Same as in answer-blue in tailwind.config.js
-  ctx.strokeStyle = '#008AFF';
+  ctx.fillStyle = '#8A8ADD'; // Same as in emphasis-blue in tailwind.config.js
+  ctx.strokeStyle = '#8A8ADD';
   ctx.lineWidth = 4 * lineWidth;
   ctx.setLineDash([]);
 
