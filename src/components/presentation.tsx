@@ -13,7 +13,7 @@ const Presentation: React.FC<Props> = ({ setQuizzStatus }) => (
         <a
           href="https://en.wikipedia.org/wiki/Bartle_taxonomy_of_player_types"
           target="_blank"
-          className="font-bold text-emphasis hover:text-black"
+          className="font-bold text-emphasis hover:text-achiever"
           rel="noreferrer"
         >
           {' '}
@@ -33,7 +33,7 @@ const Presentation: React.FC<Props> = ({ setQuizzStatus }) => (
           <a
             href="https://cohere.ai/"
             target="_blank"
-            className="font-bold text-emphasis hover:text-black"
+            className="font-bold text-emphasis hover:text-achiever"
             rel="noreferrer"
           >
             CohereAI&apos;s classification API
@@ -62,7 +62,7 @@ const Presentation: React.FC<Props> = ({ setQuizzStatus }) => (
           <a
             href="https://github.com/quecot"
             target="_blank"
-            className="font-bold text-emphasis hover:text-black"
+            className="font-bold text-emphasis hover:text-achiever"
             rel="noreferrer"
           >
             queco - Francesc Vila
