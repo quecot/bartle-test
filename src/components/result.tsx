@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 
 const Result = () => {
-  const [globalResults, setGlobalResults] = useState([25, 25, 25, 25]);
+  const [globalResults, setGlobalResults] = useState([18, 29, 33, 20]);
 
   useEffect(() => {
     // Implement global results fetching from backend with axios
