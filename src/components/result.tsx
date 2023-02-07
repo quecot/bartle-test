@@ -1,11 +1,15 @@
 /* eslint-disable max-len */
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const Result = () => {
   const [globalResults, setGlobalResults] = useState([18, 29, 33, 20]);
 
   useEffect(() => {
-    // Implement global results fetching from backend with axios
+    const url = `${import.meta.env.VITE_API_URL}global-votes`;
+    axios.get(url).then((response) => {
+      setGlobalResults(response.data);
+    });
   }, []);
 
   return (
